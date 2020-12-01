@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.net.*?>
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox xmlns:fx="http://javafx.com/fxml" fx:controller="controller.AddStudentController" spacing="10">
+    <HBox styleClass="header" spacing="10">
+        <Text styleClass="heading" text="Add new student"/>
+    </HBox>
+    <VBox styleClass="content" alignment="CENTER" spacing="10">
+        <GridPane alignment="CENTER" hgap="10" vgap="10">
+            <Label text="Student number: " GridPane.rowIndex="0" GridPane.columnIndex="0"/>
+            <TextField fx:id="numberTf" GridPane.columnIndex="1" GridPane.rowIndex="0" GridPane.columnSpan="2" />
+            <Label text="Student name: " GridPane.rowIndex="1" GridPane.columnIndex="0" />
+            <TextField fx:id="nameTf" GridPane.columnIndex="1" GridPane.rowIndex="1" GridPane.columnSpan="2"/>
+            <Label text="Attendance: " GridPane.rowIndex="2" GridPane.columnIndex="0"/>
+            <fx:define>
+                <ToggleGroup fx:id="attenTg"/>
+            </fx:define>
+            <RadioButton text="Full Time" userData="ft" toggleGroup="$attenTg" GridPane.columnIndex="1" GridPane.rowIndex="2"/>
+            <RadioButton text="Part Time" userData="pt" toggleGroup="$attenTg" GridPane.rowIndex="2" GridPane.columnIndex="2"/>
+            <Label text="Scholarship" GridPane.columnIndex="0" GridPane.rowIndex="3"/>
+            <CheckBox fx:id="scholCb" GridPane.rowIndex="3" GridPane.columnIndex="1"/>
+            <Text fx:id="errorText" textAlignment="CENTER" GridPane.columnSpan="3" GridPane.rowIndex="4" GridPane.halignment="CENTER"/>
+        </GridPane>
+    </VBox>
+    <HBox styleClass="footer" spacing="10" alignment="CENTER">
+        <Button text="Cancel" onAction="#handleCancel"/>
+        <Button fx:id="addBtn" text="Add" disable="true" onAction="#handleAdd"/>
+    </HBox>
+    <stylesheets>
+        <URL value="@style.css"/>
+    </stylesheets>
+</VBox>
