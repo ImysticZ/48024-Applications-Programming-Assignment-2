@@ -1,5 +1,6 @@
 # 48024-Applications-Programming-Assignment-2
 This assignment uses javafx combined with a MVC architecture to create a graphical interface for an university to store students and allow them to be enrolled into subjects.
+100/100
 
 ![alt text](https://github.com/ImysticZ/48024-Applications-Programming-Assignment-2/blob/main/images/1.PNG?raw=true)
 
